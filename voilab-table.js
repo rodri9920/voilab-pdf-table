@@ -858,11 +858,6 @@ lodash.assign(PdfTable.prototype, {
             err.code = 1;
             throw err;
         }
-
-        if (this.showHeaders) {
-            this.addHeader(index);
-            index++;
-        }
         // calculate height for each row, depending on multiline contents
         this.emitter.emit('row-height-calculate', this, data);
         lodash.forEach(data, function (row) {
